@@ -1,0 +1,71 @@
+<!--index.wxml-->
+<view class="container page1">
+  <view class='top'>
+    <view class='t-title'>
+      <view class='title'>今日精选</view>
+      <view class='right' bindtap='showLogin'>
+        <view>{{!isLogin ? "login in" : userName}}</view>
+        <image class='icon-solid-down' src='../../img/page1-down.png'></image>
+      </view>
+    </view>
+    <!-- 轮播图 -->
+    <swiper circular="{{swiper.circular}}" next-margin="{{swiper.nextMargin}}" autoplay="{{swiper.autoplay}}" interval="{{swiper.interval}}" duration="{{swiper.duration}}">
+      <block wx:key="{{index}}" wx:for="{{swiperData}}">
+        <swiper-item>
+        <view data-type='detail' data-aid="{{item.aid}}" bindtap="hasLogin" data-url="{{'../video-detail/index?aid='+item.aid}}"><image src="{{host+'/'+item.thumbnail}}" class="slide-image" width="355" height="150" />
+        </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- 虎鲸学堂 -->
+  <view class='page1-list' wx:key="{{index}}" wx:for="{{column}}">
+    <view class='t-title'>
+      <view class='left'>
+        <image class='icon-quan' src='../../img/page1-ring.png'></image>
+        <view>{{item.name}}</view>
+      </view>
+      <view class='right'>
+        <view data-type='more' bindtap="hasLogin" data-url="{{'../videos/index?sid='+item.id+'&sName='+item.name}}" hover-class="navigator-hover">更多</view>
+      </view>
+    </view>
+    <view class='lists'>
+      <view data-type='detail' data-aid="{{listItem.aid}}" bindtap="hasLogin" data-url="{{'../video-detail/index?aid='+listItem.aid}}" class='list-item' wx:key="{{idx}}" wx:for="{{columnData[item.id]}}" wx:for-item="listItem"  wx:for-index="idx">
+        <image src="{{host+'/'+listItem.thumbnail}}"></image>
+        <text>{{listItem.title}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 蓝港公开课 -->
+  <!-- <view class='page1-list'>
+    <view class='t-title'>
+      <view class='left'>
+        <image class='icon-quan' src='../../img/page1-ring.png'></image>
+        <view>蓝港公开课</view>
+      </view>
+      <view class='right'>
+        <navigator url="../videos/index" hover-class="navigator-hover">更多</navigator>
+      </view>
+    </view>
+    <view class='lists'>
+      <navigator url="../video-detail/index" class='list-item'>
+        <image src='../../img/temp/page1-img3.jpg'></image>
+        <text>致暗恋：陪伴是最怂告白想在阴天里听莫文蔚的</text>
+      </navigator>
+      <navigator url="../video-detail/index" class='list-item'>
+        <image src='../../img/temp/page1-img3.jpg'></image>
+        <text>致暗恋：陪伴是最怂告白想在阴天里听莫文蔚的</text>
+      </navigator>
+      <navigator url="../video-detail/index" class='list-item'>
+        <image src='../../img/temp/page1-img3.jpg'></image>
+        <text>致暗恋：陪伴是最怂告白想在阴天里听莫文蔚的</text>
+      </navigator>
+      <navigator url="../video-detail/index" class='list-item'>
+        <image src='../../img/temp/page1-img3.jpg'></image>
+        <text>致暗恋：陪伴是最怂告白想在阴天里听莫文蔚的</text>
+      </navigator>
+    </view>
+  </view> -->
+</view>
+<!-- 登录 -->
+<Login id="login" bind:confirmEvent="_confirmEvent" />

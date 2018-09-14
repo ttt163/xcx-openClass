@@ -1,0 +1,15 @@
+{
+  "pages":[
+    
+    "pages/index/index",
+    "pages/videos/index",
+    "pages/video-detail/index"
+  
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Linekong Learning",
+    "navigationBarTextStyle":"black"
+  }
+}

@@ -1,0 +1,16 @@
+<!--component/login/Login.wxml-->
+<view wx:if="{{isShow}}" class='login'>
+  <view class='mask' bindtap='hideDialog'></view>
+  <view class='login-contain'>
+    <image class='logo' src='../../img/login-logo.png'></image>
+    <view class='input-item'>
+      <input data-key="userName" bindblur="changeValue" placeholder='请输入蓝港邮箱账号' placeholder-class='p-input' />
+      <image class='line' src='../../img/login-line.png'></image>
+    </view>
+    <view class='input-item'>
+      <input data-key="userPwd" bindblur="changeValue" password placeholder='请输入蓝港邮箱密码' placeholder-class='p-input' />
+      <image class='line' src='../../img/login-line.png'></image>
+    </view>
+    <image catchtap='_confirmEvent' class='btn' src='../../img/login-btn.png'></image>
+  </view>
+</view>

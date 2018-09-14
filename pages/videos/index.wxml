@@ -1,0 +1,46 @@
+<!--pages/videos/index.wxml-->
+<wxs src="../../utils/util.wxs" module="utils" />
+<view class='page2'>
+  <text class='title'>{{columnName}}</text>
+  <view class='videos-contain'>
+    <!-- item  -->
+    <navigator data-aid="{{item.aid}}" bindtap="videoPlayNum" url="{{'../video-detail/index?aid='+item.aid}}" class='video-item' wx:key="{{index}}" wx:for="{{videoList}}">
+      <view class='img-box'>
+        <image class='video-img' src="{{host+'/'+item.thumbnail}}"></image>
+        <image class='video-status' src='../../img/page2-no.png'></image>
+      </view>
+      <text class='item-title'>{{item.title}}</text>
+      <view class='item-footer'>
+        <text>讲师：{{item.lecturer}}</text>
+        <view class='f-right'>
+           <text>{{utils.formatDateToDay(item.t, '/')}}</text> 
+           <!-- <text>{{item.t}}</text> -->
+          <view>
+            <image class='icon-hot' src='../../img/page2-hot.png'></image>
+            <text>{{item.n}}</text>
+          </view>
+        </view>
+      </view>
+    </navigator>
+    <!-- end  -->
+    <!-- item  -->
+    <!-- <navigator url="../video-detail/index" class='video-item'>
+      <view class='img-box'>
+        <image class='video-img' src='../../img/temp/page1-img1.jpg'></image>
+        <image class='video-status' src='../../img/page2-no.png'></image>
+      </view>
+      <text class='item-title'>华语唱作人该如何在想在华语唱作人该如何华语唱作人该如何在想在华语唱作人该如何华语唱作人该如何在想在华语唱作人该如何</text>
+      <view class='item-footer'>
+        <text>讲师：王春花</text>
+        <view class='f-right'>
+          <text>2017/08/09</text>
+          <view>
+            <image class='icon-hot' src='../../img/page2-hot.png'></image>
+            <text>34</text>
+          </view>
+        </view>
+      </view>
+    </navigator> -->
+    <!-- end  -->
+  </view>
+</view>

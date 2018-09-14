@@ -1,0 +1,82 @@
+/* pages/videos/index.wxss */
+
+.page2 {
+  padding: 30rpx 25rpx 18rpx;
+  color: #333;
+}
+
+.page2 > .title {
+  font-size: 54rpx;
+}
+
+.page2 .videos-contain {
+  margin-top: 28rpx;
+}
+
+.video-item {
+  height: 510rpx;
+  width: 700rpx;
+  box-shadow: 5rpx 5rpx 10rpx #aeaeae;
+  border-radius: 25rpx;
+  overflow: hidden;
+  margin-bottom: 38rpx;
+}
+
+.video-item image {
+  width: 100%;
+}
+
+.video-item .img-box {
+  position: relative;
+  height: 366rpx;
+}
+
+.video-item .img-box .video-img {
+  height: 366rpx;
+}
+
+.video-item .img-box .video-status {
+  width: 91rpx;
+  height: 89rpx;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.video-item .item-title {
+  font-size: 32rpx;
+  display: block;
+  margin: 22rpx 20rpx; 
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.video-item .item-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 28rpx;
+  color: #666;
+  margin: 0 20rpx;
+  align-items: center;
+}
+
+.video-item .item-footer .f-right {
+  display: flex;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.video-item .item-footer .f-right > text{
+  margin-right: 50rpx;
+}
+
+.video-item .item-footer .f-right > view {
+  color: #449af8;
+}
+
+.video-item .icon-hot {
+  width: 19rpx;
+  height: 24rpx;
+  margin-right: 10rpx;
+}

@@ -1,0 +1,147 @@
+/* pages/video-detail/index.wxss */
+
+.page3 .video-box {
+  position: relative;
+  height: 435rpx;
+}
+
+.page3 .video-box video {
+  width: 100%;
+  height: 435rpx;
+}
+
+.page3 .video-box .video-img {
+  top: 0;
+  position: absolute;
+  z-index: 1;
+   width: 100%;
+  height: 435rpx;
+}
+
+.page3 .video-box .mask {
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.page3 .video-box .img-bg {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.page3 .video-box .play-btn {
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  position: absolute;
+  z-index: 3;
+  width: 124rpx;
+  height: 124rpx;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+}
+
+.page3 .video-box .img-play {
+  width: 52rpx;
+  height: 62rpx;
+  margin-left: 50%;
+  margin-top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.page3 .video-box > .icons {
+  position: absolute;
+  bottom: -94rpx;
+  z-index: 4;
+  color: 999;
+  font-size: 28rpx;
+}
+
+.page3 .video-box > view text {
+  display: block;
+  text-align: center;
+  margin-top: 6rpx;
+}
+
+.page3 .video-box > view.intro-box {
+  right: 150rpx;
+}
+
+.page3 .video-box > view.text-box {
+  right: 25rpx;
+}
+
+.page3 .video-box > view > .icon-box {
+  position: relative;
+  width: 88rpx;
+  height: 88rpx;
+}
+
+.page3 .video-box > view .icon-img-quan {
+  width: 88rpx;
+  height: 88rpx;
+  position: absolute;
+}
+
+.page3 .video-box > view .icon-img {
+  width: 69rpx;
+  height: 69rpx;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  position: absolute;
+}
+
+.page3 .a-contain {
+  margin-top: 108rpx;
+  color: #666;
+  font-size: 28rpx;
+}
+
+.page3 .a-contain .a-intro {
+  background-color: #f0f0f0;
+  padding-bottom: 20rpx;
+}
+
+.page3 .article-box {
+  background-color: #fff;
+  padding: 25rpx 25rpx 30rpx;
+}
+
+.page3 .a-title {
+  font-size: 38rpx;
+  color: #444;
+  margin-bottom: 30rpx;
+}
+
+.page3 .a-title text {
+  display: block;
+  border-left: 4rpx #449af8 solid;
+  padding-left: 16rpx;
+}
+
+.page3 .icon-down {
+  width: 42rpx;
+  height: 22rpx;
+  display: block;
+  margin: 26rpx auto 0;
+   transition: all 0.4s;
+}
+
+.page3 .icon-down.up {
+  transform: rotate(180deg);
+  transition: all 0.4s;
+}
+
+.page3 .text-over {
+   display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden; 
+}

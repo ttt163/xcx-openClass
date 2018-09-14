@@ -1,0 +1,67 @@
+<!--pages/video-detail/index.wxml-->
+<view class='page3'>
+  <!-- 视频 -->
+  <view class='video-box'>
+   <video bindfullscreenchange="fullScreen" hidden="{{isHide}}" id="myVideo" poster="{{host+'/'+videoInfo.bigpic}}" show-center-play-btn="{{video.isShowPlayBtn}}" controls="{{video.controls}}" src='{{videoInfo.videourl}}'></video> 
+    <view hidden="{{!isHide}}" class="video-img">
+      <image class="img-bg" src="{{host+'/'+videoInfo.bigpic}}"></image>
+      <view class='mask'></view>
+      <view class='play-btn' bindtap="play">
+        <image class="img-play" src="../../img/page3-play.png"></image>
+      </view>
+    </view>
+    <view class='icons intro-box' bindtap="changeTap">
+      <view class='icon-box'>
+        <image class='icon-img-quan' wx:if="{{isShowIntro}}" src='../../img/page3-intro-quan.png'></image>
+        <image class='icon-img' src='../../img/page3-intro.png'></image>
+      </view>
+      <text>简介</text>
+    </view>
+    <view class='icons text-box' bindtap="changeTap">
+      <view class='icon-box'>
+        <image class='icon-img-quan' wx:if="{{!isShowIntro}}" src='../../img/page3-text-quan.png'></image>
+        <image class='icon-img' src='../../img/page3-text.png'></image>
+      </view>
+      <text>文字</text>
+    </view>
+  </view>
+  <!-- 文字内容  -->
+  <view>
+    <!-- 简介 -->
+    <view class='a-contain' wx:if="{{isShowIntro}}">
+      <view class='a-intro'>
+        <view class='article-box'>
+          <view class='a-title'>
+            <text>{{videoInfo.title}}</text>
+          </view>
+          <view>
+            <view class="{{!isTextHide ? 'a-text' :  'a-text text-over'}}">
+             {{videoInfo.description}}
+            </view>
+            <image class="{{!isTextHide ? 'icon-down up' :  'icon-down'}}" bindtap="showFullText" src='../../img/page3-down.png'></image>
+          </view>
+        </view>
+      </view>
+
+      <view class='article-box'>
+        <view class='a-title'>
+          <text>讲师：{{videoInfo.lecturer}}</text>
+        </view>
+        <view class='a-text'>
+          {{videoInfo.content}}
+        </view>
+      </view>
+    </view>
+    <!-- 文字 -->
+    <view class='a-contain' wx:if="{{!isShowIntro}}">
+      <view class='article-box'>
+        <view class='a-title'>
+          <text>文字版课程</text>
+        </view>
+        <view class='a-text'>
+          {{videoInfo.desc2}}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

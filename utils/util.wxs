@@ -1,0 +1,17 @@
+var add0 = function (m) {
+  return m < 10 ? '0' + m : m
+}
+var formatDateToDay = function(val, str) {
+  if (!val) {
+    return 0
+  }
+  var _str = !str ? '-' : str
+  var _time = getDate(val * 1000)
+  var y = _time.getFullYear()
+  var M = _time.getMonth() + 1
+  var d = _time.getDate()
+  return y + _str + add0(M) + _str + add0(d)
+}
+module.exports = {
+  formatDateToDay: formatDateToDay
+};

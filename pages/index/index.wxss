@@ -1,0 +1,107 @@
+/**index.wxss**/
+
+.page1 {
+  padding-left: 25rpx;
+  padding-bottom: 25rpx;
+}
+
+.page1 .top .t-title {
+  font-size: 54rpx;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25rpx;
+  margin-top: 48rpx;
+}
+
+.page1 .top .t-title .right {
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+  color: #449af8;
+  margin-right: 35rpx;
+}
+
+.page1 swiper {
+  height: 410rpx;
+}
+
+.page1 swiper swiper-item {
+  width: 690rpx;
+  overflow: hidden;
+}
+
+.page1 swiper image {
+  border-radius: 15rpx;
+  width: 690rpx;
+  height: 400rpx;
+  box-shadow: 5rpx 5rpx 10rpx #aeaeae;
+}
+
+.page1-list {
+  margin-top: 50rpx;
+}
+
+.page1-list .t-title {
+  display: flex;
+  font-size: 42rpx;
+  color: #444;
+  justify-content: space-between;
+  padding-right: 25rpx;
+}
+
+.page1-list .left {
+  display: flex;
+  align-items: center;
+}
+
+.page1-list .left image {
+  margin-right: 10rpx;
+}
+
+.page1-list .right {
+  font-size: 28rpx;
+}
+
+.lists {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list-item {
+  width: 340rpx;
+  margin-right: 20rpx;
+  font-size: 26rpx;
+  color: #444;
+  border-radius: 25rpx;
+  overflow: hidden;
+  height: 430rpx;
+  box-shadow: 5rpx 5rpx 10rpx #aeaeae;
+  margin-top: 22rpx;
+}
+
+.list-item image {
+  display: block;
+  width: 100%;
+  height: 320rpx;
+}
+
+.list-item text {
+  display: block;
+  margin: 15rpx 30rpx 0 20rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.icon-solid-down {
+  width: 16rpx;
+  height: 14rpx;
+  margin-left: 10rpx;
+}
+
+.icon-quan {
+  width: 18rpx;
+  height: 18rpx;
+}
